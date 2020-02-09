@@ -1,0 +1,6 @@
+framework module Pods_Empap_EmpapUITests {
+  umbrella header "Pods-Empap-EmpapUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

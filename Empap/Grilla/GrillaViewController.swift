@@ -217,7 +217,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                 addLabel(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
                 addLabel(labeltext: "Descripción: ", text: data.descripcion, stackview: horizontalView)
                 addLabel(labeltext: "Debe:", text: data.debe, stackview: horizontalView)
-                addLabel(labeltext: "Haber: ", text: data.haber, stackview: horizontalView)
+                addLabel(labeltext: "Importe: ", text: data.haber, stackview: horizontalView)
                 addLabel(labeltext: "Saldo: ", text: data.saldo, stackview: horizontalView)
             }
             stackInfoView.addArrangedSubview(horizontalView)
@@ -256,7 +256,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                 addLabel(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
                 addLabel(labeltext: "Comprobante: ", text: data.comprobante, stackview: horizontalView)
                 addLabel(labeltext: "Debe: ", text: data.debe, stackview: horizontalView)
-                addLabel(labeltext: "Haber: ", text: data.haber, stackview: horizontalView)
+                addLabel(labeltext: "Importe: ", text: data.haber, stackview: horizontalView)
                 addLabel(labeltext: "Saldo: ", text: data.saldo, stackview: horizontalView)
             }
             stackInfoView.addArrangedSubview(horizontalView)
@@ -482,7 +482,8 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                                                         caja.idCaja = value["id"].stringValue
                                                         caja.debe = value["debe"].stringValue
                                                         caja.descripcion = value["descripcion"].stringValue
-                                                        caja.fecha = value["fecha"].stringValue
+                                                        let fecha = self.formatFecha(fecha: value["fecha"].stringValue)
+                                                        caja.fecha = fecha
                                                         caja.haber = value["haber"].stringValue
                                                         caja.saldo = value["saldo"].stringValue
                                                         grilla.titulo = "Caja"
@@ -496,7 +497,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                                                     var def = ""
                                                     var count = 0
                                                     for data in response{
-                                                        print(data)
+                                                        //print(data)
                                                         let grilla = Grilla()
                                                         let value = JSON(data)
                                                         let clientes = Clientes()
@@ -504,7 +505,8 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                                                         clientes.cliente = value["cliente"].stringValue
                                                         clientes.comprobante = value["comprobante"].stringValue
                                                         clientes.debe = value["debe"].stringValue
-                                                        clientes.fecha = value["fecha"].stringValue
+                                                        let fecha = self.formatFecha(fecha: value["fecha"].stringValue)
+                                                        clientes.fecha = fecha
                                                         clientes.haber = value["haber"].stringValue
                                                         clientes.saldo = value["saldo"].stringValue
                                                         if(def != clientes.cliente){
@@ -527,9 +529,9 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                                                         fact.idFacturacion = value["id"].stringValue
                                                         fact.cliente = value["cliente"].stringValue
                                                         fact.comprobante = value["comprobante"].stringValue
-                                                        fact.fecha = value["fecha"].stringValue
+                                                        let fecha = self.formatFecha(fecha: value["fecha"].stringValue)
+                                                        fact.fecha = fecha
                                                         fact.importe = value["importe"].stringValue
-                                                    
                                                         grilla.titulo = "Facturación"
                                                         grilla.info.append(fact)
                                                         self.itemList.append(grilla)
@@ -545,7 +547,8 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                                                         let pend = Pendientes()
                                                         pend.idPendiente = value["id"].stringValue
                                                         pend.comprobante = value["comprobante"].stringValue
-                                                        pend.fecha = value["fecha"].stringValue
+                                                        let fecha = self.formatFecha(fecha: value["fecha"].stringValue)
+                                                        pend.fecha = fecha
                                                         pend.importe = value["importe"].stringValue
                                                         
                                                         grilla.titulo = "Pendiente"
@@ -611,6 +614,17 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
         // Pass the selected object to the new view controller.
     }
     */
+    func formatFecha(fecha:String)->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" // This formate is input formated .
+
+        let formateDate = dateFormatter.date(from:fecha)!
+        dateFormatter.dateFormat = "dd-MM-yyyy" // Output Formated
+
+        
+        return dateFormatter.string(from: formateDate)
+        
+    }
 
 }
 

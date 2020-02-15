@@ -19,7 +19,9 @@ class MenuViewController: UIViewController ,UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIDMenu", for: indexPath) as! MenuCollectionViewCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 10
         cell.menuLabel.text = itemList[indexPath.row].nombreMenu
+        cell.menuLabel.font = UIFont.boldSystemFont(ofSize: cell.menuLabel.font.pointSize)
         return cell
         
     }

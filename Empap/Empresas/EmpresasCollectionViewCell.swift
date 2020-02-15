@@ -11,5 +11,4 @@ import UIKit
 class EmpresasCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var empresaLabel: UILabel!
-    
 }

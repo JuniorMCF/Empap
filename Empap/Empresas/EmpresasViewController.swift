@@ -18,10 +18,13 @@ class EmpresasViewController: UIViewController,UICollectionViewDataSource, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIDEmpresa", for: indexPath) as! EmpresasCollectionViewCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 10
         cell.empresaLabel.text = itemList[indexPath.row].nombre
+        cell.empresaLabel.font = UIFont.boldSystemFont(ofSize: cell.empresaLabel.font.pointSize)
         return cell
         
     }

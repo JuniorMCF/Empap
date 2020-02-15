@@ -10,7 +10,6 @@ import UIKit
 
 class GrillaCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var tituloLabel: UILabel!
     @IBOutlet var listView: UIStackView!
-    
+    @IBOutlet var tituloLabel: UILabel!
 }

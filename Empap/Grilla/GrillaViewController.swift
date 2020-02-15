@@ -230,6 +230,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             volverButton.isUserInteractionEnabled = false
             titulosStackView.isUserInteractionEnabled = false
             GrillaCollectionView.alpha = 0.3
+            titulosStackView.alpha = 0.3
             //vistaGeneral.alpha = 0.5
             salirButton.alpha = 0.3
             volverButton.alpha = 0.3
@@ -270,6 +271,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             volverButton.isUserInteractionEnabled = false
             titulosStackView.isUserInteractionEnabled = false
             GrillaCollectionView.alpha = 0.3
+            titulosStackView.alpha = 0.3
             //vistaGeneral.alpha = 0.5
             viewTitle.alpha = 0.3
             salirButton.alpha = 0.3
@@ -307,6 +309,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             volverButton.isUserInteractionEnabled = false
             titulosStackView.isUserInteractionEnabled = false
             GrillaCollectionView.alpha = 0.3
+            titulosStackView.alpha = 0.3
             //vistaGeneral.alpha = 0.5
             salirButton.alpha = 0.3
             volverButton.alpha = 0.3
@@ -344,6 +347,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             volverButton.isUserInteractionEnabled = false
             titulosStackView.isUserInteractionEnabled = false
             GrillaCollectionView.alpha = 0.3
+            titulosStackView.alpha = 0.3
             //vistaGeneral.alpha = 0.5
             salirButton.alpha = 0.3
             volverButton.alpha = 0.3

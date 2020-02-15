@@ -38,7 +38,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                 titulosStackView.distribution = .equalSpacing
                 titulosStackView.layer.borderWidth = 1
                 titulosStackView.layer.borderColor = UIColor.black.cgColor
-                addLabelCenter(labeltext: "Fecha    ", stackview: titulosStackView)
+                addLabelCenter(labeltext: "Fecha        ", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Descripcion", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Importe", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Saldo", stackview: titulosStackView)
@@ -75,7 +75,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                 titulosStackView.distribution = .equalSpacing
                 titulosStackView.layer.borderWidth = 1
                 titulosStackView.layer.borderColor = UIColor.black.cgColor
-                addLabelCenter(labeltext: "Fecha    ", stackview: titulosStackView)
+                addLabelCenter(labeltext: "Fecha        ", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Comprobante", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Importe", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Saldo", stackview: titulosStackView)
@@ -124,7 +124,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                 titulosStackView.distribution = .equalSpacing
                 titulosStackView.layer.borderWidth = 1
                 titulosStackView.layer.borderColor = UIColor.black.cgColor
-                addLabelCenter(labeltext: "Fecha    ", stackview: titulosStackView)
+                addLabelCenter(labeltext: "Fecha        ", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Cliente", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Comprobante", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Importe", stackview: titulosStackView)
@@ -162,7 +162,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
                 titulosStackView.distribution = .equalSpacing
                 titulosStackView.layer.borderWidth = 1
                 titulosStackView.layer.borderColor = UIColor.black.cgColor
-                addLabelCenter(labeltext: "Fecha    ", stackview: titulosStackView)
+                addLabelCenter(labeltext: "Fecha        ", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Comprobante", stackview: titulosStackView)
                 addLabelCenter(labeltext: "Importe", stackview: titulosStackView)
             }
@@ -214,11 +214,11 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             horizontalView.layer.borderWidth = 1
             horizontalView.layer.borderColor = UIColor.black.cgColor
             for data in lista{
-                addLabel(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
-                addLabel(labeltext: "Descripción: ", text: data.descripcion, stackview: horizontalView)
-                addLabel(labeltext: "Debe:", text: data.debe, stackview: horizontalView)
-                addLabel(labeltext: "Importe: ", text: data.haber, stackview: horizontalView)
-                addLabel(labeltext: "Saldo: ", text: data.saldo, stackview: horizontalView)
+                addLabel15(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
+                addLabel15(labeltext: "Descripción: ", text: data.descripcion, stackview: horizontalView)
+                addLabel15(labeltext: "Debe:", text: data.debe, stackview: horizontalView)
+                addLabel15(labeltext: "Importe: ", text: data.haber, stackview: horizontalView)
+                addLabel15(labeltext: "Saldo: ", text: data.saldo, stackview: horizontalView)
             }
             stackInfoView.addArrangedSubview(horizontalView)
             //ocultamos lo de atras
@@ -253,12 +253,12 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             horizontalView.layer.borderWidth = 1
             horizontalView.layer.borderColor = UIColor.black.cgColor
             for data in lista{
-                addLabel(labeltext: "Cliente: ", text: data.cliente, stackview: horizontalView)
-                addLabel(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
-                addLabel(labeltext: "Comprobante: ", text: data.comprobante, stackview: horizontalView)
-                addLabel(labeltext: "Debe: ", text: data.debe, stackview: horizontalView)
-                addLabel(labeltext: "Importe: ", text: data.haber, stackview: horizontalView)
-                addLabel(labeltext: "Saldo: ", text: data.saldo, stackview: horizontalView)
+                addLabel15(labeltext: "Cliente: ", text: data.cliente, stackview: horizontalView)
+                addLabel15(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
+                addLabel15(labeltext: "Comprobante: ", text: data.comprobante, stackview: horizontalView)
+                addLabel15(labeltext: "Debe: ", text: data.debe, stackview: horizontalView)
+                addLabel15(labeltext: "Importe: ", text: data.haber, stackview: horizontalView)
+                addLabel15(labeltext: "Saldo: ", text: data.saldo, stackview: horizontalView)
             }
             stackInfoView.addArrangedSubview(horizontalView)
             //ocultamos lo de atras
@@ -294,10 +294,10 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             horizontalView.layer.borderWidth = 1
             horizontalView.layer.borderColor = UIColor.black.cgColor
             for data in lista{
-                addLabel(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
-                addLabel(labeltext: "Cliente: ", text: data.cliente, stackview: horizontalView)
-                addLabel(labeltext: "Comprobante: ", text: data.comprobante, stackview: horizontalView)
-                addLabel(labeltext: "Importe: ", text: data.importe, stackview: horizontalView)
+                addLabel15(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
+                addLabel15(labeltext: "Cliente: ", text: data.cliente, stackview: horizontalView)
+                addLabel15(labeltext: "Comprobante: ", text: data.comprobante, stackview: horizontalView)
+                addLabel15(labeltext: "Importe: ", text: data.importe, stackview: horizontalView)
             }
             stackInfoView.addArrangedSubview(horizontalView)
             //ocultamos lo de atras
@@ -333,9 +333,9 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
             horizontalView.layer.borderWidth = 1
             horizontalView.layer.borderColor = UIColor.black.cgColor
             for data in lista{
-               addLabel(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
-                addLabel(labeltext: "Comprobante: ", text: data.comprobante, stackview: horizontalView)
-                addLabel(labeltext: "Importe: ", text: data.importe, stackview: horizontalView)
+               addLabel15(labeltext: "Fecha: ", text: data.fecha, stackview: horizontalView)
+                addLabel15(labeltext: "Comprobante: ", text: data.comprobante, stackview: horizontalView)
+                addLabel15(labeltext: "Importe: ", text: data.importe, stackview: horizontalView)
             }
             stackInfoView.addArrangedSubview(horizontalView)
             //ocultamos lo de atras
@@ -367,6 +367,17 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
     func addLabel(labeltext:String,text: String, stackview:UIStackView){
         let label = UILabel(frame: CGRect(x: 0, y: 0, width:100, height: 13))
         label.font = label.font.withSize(14)
+        label.textAlignment = NSTextAlignment.center
+        label.text = labeltext+text
+        label.textColor = UIColor(named: "Color-default")
+        stackview.distribution = .fillEqually
+        // create the left-side "Donate" view
+        stackview.addArrangedSubview(label)
+        
+    }
+    func addLabel15(labeltext:String,text: String, stackview:UIStackView){
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width:100, height: 13))
+        label.font = label.font.withSize(15)
         label.textAlignment = NSTextAlignment.center
         label.text = labeltext+text
         label.textColor = UIColor(named: "Color-default")
@@ -425,6 +436,7 @@ class GrillaViewController: UIViewController,UICollectionViewDataSource, UIColle
         salirButton.isUserInteractionEnabled = true
         volverButton.isUserInteractionEnabled = true
         GrillaCollectionView.alpha = 1
+        titulosStackView.alpha = 1
         viewTitle.alpha = 1
         salirButton.alpha = 1
         volverButton.alpha = 1
